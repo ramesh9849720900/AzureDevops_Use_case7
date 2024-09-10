@@ -20,7 +20,7 @@ stages:
     - task: AzurePowerShell@5
       inputs:
         azureSubscription: $(azureSubscription)
-        ScriptPath: './deploy-azure-webapp.ps1'
+        ScriptPath: './deploy-azure-webapp'
         ScriptArguments: '-ResourceGroupName $(resourceGroupName) -AppName $(appName) -Location $(location) -AppServicePlanName $(appServicePlanName)'
         azurePowerShellVersion: 'LatestVersion'
-        pwsh: true
+        push: true
