@@ -9,6 +9,7 @@ variables:
   resourceGroupName: 'myresourcegroup'  # The name of the Azure Resource Group
   appName: 'dot-net-webapp'  # The name of the Azure Web App
   location: 'East US'  # Azure region
+  appServicePlanName: 'ASP-myresourcegroup-b87a'  # Here we got an error
   
 
 stages:
@@ -20,6 +21,6 @@ stages:
       inputs:
         azureSubscription: $(azureSubscription)
         ScriptPath: './deploy-azure-webapp.ps1'
-        ScriptArguments: '-ResourceGroupName $(resourceGroupName) -AppName $(appName) -Location $(location)'
+        ScriptArguments: '-ResourceGroupName $(resourceGroupName) -AppName $(appName) -Location $(location) -AppServicePlanName $(appServicePlanName)'
         azurePowerShellVersion: 'LatestVersion'
         pwsh: true
