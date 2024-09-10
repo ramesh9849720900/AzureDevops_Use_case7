@@ -9,7 +9,7 @@ variables:
   resourceGroupName: 'myresourcegroup'  # The name of the Azure Resource Group
   appName: 'dot-net-webapp'  # The name of the Azure Web App
   location: 'East US'  # Azure region
-  appServicePlanName: 'ASP-myresourcegroup-b87a (S1: 1)'  # The name of the App Service Plan
+  appServicePlanName: 'ASP-myresourcegroup-b87a (S1: 1)'  # Here we got an error
 
 stages:
 - stage: Deploy
